@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script
+      src="https://kit.fontawesome.com/53a00de455.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-stone-200 flex flex-col">
+    <section
+      class="fixed bg-slate-950 top-0 right-[-360px] w-[360px] h-screen z-20 text-slate-200 p-4 duration-300 border-l border-slate-200 flex flex-col justify-between"
+      id="carrinho"
+    >
+      <div id="cabecalho-carrinho" class="flex justify-between">
+        <p>Meu carrinho</p>
+        <button id="fechar-carrinho">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <section
+        id="produtos-carrinho"
+        class="h-3/5 overflow-y-auto flex flex-col gap-2"
+      ></section>
+      <p class="bg-slate-200 text-green-700 rounded-md pl-5" id="preco-total">
+        Total :$200
+      </p>
+      <button
+        id="finalizar-compra"
+        class="bg-slate-200 text-slate-900 p-1 hover:bg-slate-900 hover:text-slate-200"
+      >
+        Finalizar Compra
+      </button>
+    </section>
+    <header
+      class="flex sticky top-0 bg-slate-950 justify-between items-center px-8 py-4 shadow-slate-700 shadow-md text-2xl z-10"
+    >
+      <a href="./">
+        <img
+          class="h-16 mx-2"
+          src="./assets/logo/hashtag.svg"
+          alt="Logo Hashtag"
+        />
+      </a>
+      <div class="text-slate-200 flex gap-6 mx-2">
+        <button id="abrir-carrinho">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <a href="./pedidos.html"
+          ><button><i class="fa-solid fa-user"></i></button
+        ></a>
+      </div>
+    </header>
+
+    <main class="flex flex-col items-center">
+      <section id="filtros" class="flex py-10">
+        <div class="px-2">
+          <input
+            id="exibir-todos"
+            type="radio"
+            class="peer hidden"
+            name="filtro"
+            checked
+          />
+          <label
+            for="exibir-todos"
+            class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold peer-checked:cursor-default p-2 rounded-xl cursor-pointer select-none"
+            >Todos</label
+          >
+        </div>
+
+        <div class="px-2">
+          <input
+            id="exibir-masculinos"
+            type="radio"
+            class="peer hidden"
+            name="filtro"
+          />
+          <label
+            for="exibir-masculinos"
+            class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold peer-checked:cursor-default p-2 rounded-xl cursor-pointer select-none"
+            >Masculinos</label
+          >
+        </div>
+
+        <div class="px-2">
+          <input
+            id="exibir-femininos"
+            type="radio"
+            class="peer hidden"
+            name="filtro"
+          />
+          <label
+            for="exibir-femininos"
+            class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold peer-checked:cursor-default p-2 rounded-xl cursor-pointer select-none"
+            >Femininos</label
+          >
+        </div>
+      </section>
+
+      <div class="flex justify-center my-10">
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10"
+          id="container-produto"
+        ></section>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+    <!-- <script src="./src/menuCarrinho.js"></script> -->
+  </body>
+</html>
