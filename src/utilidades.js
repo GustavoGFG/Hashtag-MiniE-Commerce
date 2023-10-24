@@ -93,7 +93,7 @@ export function desenharProdutoCarrinhoSimples(
     'p-1',
     'mb-2',
     'relative',
-    'w-[360px]'
+    'w-[100%]'
   );
   cartaoProdutoCarrinho.innerHTML = `
     <img

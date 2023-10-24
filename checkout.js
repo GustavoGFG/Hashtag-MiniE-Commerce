@@ -1,3 +1,4 @@
+import { atualizarPrecoCarrinho } from './src/menuCarrinho';
 import {
   apagarDoLocalStorage,
   desenharProdutoCarrinhoSimples,
@@ -38,5 +39,6 @@ function finalizarCompra(evt) {
 }
 
 desenharProdutosCheckout();
+atualizarPrecoCarrinho();
 
 document.addEventListener('submit', evt => finalizarCompra(evt));

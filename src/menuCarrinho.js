@@ -141,5 +141,5 @@ export function atualizarPrecoCarrinho() {
         idsProdutoCarrinhoComQuantidade[idProdutoNoCarrinho];
     }
   }
-  precoCarrinho.innerHTML = `Total R$${precoTotalCarrinho}`;
+  precoCarrinho.innerHTML = `R$ ${precoTotalCarrinho},00`;
 }
